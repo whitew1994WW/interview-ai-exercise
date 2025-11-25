@@ -33,7 +33,7 @@ dev-api:
 ########################################################################################################################
 
 start-app:
-	uv run streamlit run demo/main.py
+	uv run streamlit run demo/Chat.py
 
 
 

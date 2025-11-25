@@ -1,0 +1,1007 @@
+{
+  "questions": [
+    {
+      "question": "What does the 422 status code indicate when making an RPC call to an action in the StackOne API?",
+      "answer": "The 422 status code indicates a validation error when making an RPC call to an action. The response will include content in the 'application/json' format, adhering to the 'UnprocessableEntityResponse' schema.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_106",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "If a developer encounters a 429 status code while using the StackOne API, what retry strategy is suggested by the documentation?",
+      "answer": "The StackOne API documentation suggests using a 'backoff' strategy for retrying requests that encounter a 429 status code, which indicates too many requests.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_106",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "What does a 501 status code indicate when using the StackOne API, and what is the expected response format?",
+      "answer": "A 501 status code indicates that the functionality is not implemented. The expected response format is JSON, which will adhere to the schema defined in the NotImplementedResponse component of the API.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_81",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "How does the StackOne API handle security, and what are the available authentication methods?",
+      "answer": "The StackOne API handles security using two methods: basic authentication and API Key authentication. These methods are specified in the security section of the API documentation.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_81",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "What does the 501 status code indicate in the StackOne API, and what is the expected content type of the response?",
+      "answer": "The 501 status code indicates that the functionality is not implemented in the StackOne API. The expected content type of the response is 'application/json', and the schema for the response is referenced by '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_85",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "What authentication methods are supported by the StackOne API according to the given documentation chunk?",
+      "answer": "The StackOne API supports two authentication methods as indicated in the documentation chunk: Basic authentication and API Key authentication.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_85",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "What does the API return when a functionality is not implemented, and how is this response structured?",
+      "answer": "When a functionality is not implemented, the API returns a 501 status code. The response is structured in JSON format, referencing the schema defined at '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_89",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "What security mechanisms are supported by the StackOne API for authentication?",
+      "answer": "The StackOne API supports two security mechanisms for authentication: Basic Authentication and API Key Authentication.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_89",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "What is the purpose of the 'http_method' field in the StackOne API, and can you provide an example of its value?",
+      "answer": "The 'http_method' field in the StackOne API specifies the HTTP method used for the request. It provides information on whether the request was a GET, POST, PUT, DELETE, etc. An example value for this field is 'get'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_147",
+      "source_metadata": {
+        "attribute": "components",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "How can a developer determine if a request to the StackOne API was successful, and what data type represents this information?",
+      "answer": "A developer can determine if a request to the StackOne API was successful by checking the 'success' field. This field is a boolean data type, where a value of 'true' indicates that the request was successful, and 'false' indicates failure.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_147",
+      "source_metadata": {
+        "attribute": "components",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "What type of error response should a developer expect if they exceed the rate limit when making requests to the HRIS API?",
+      "answer": "If a developer exceeds the rate limit when making requests to the HRIS API, they should expect a \"429 Too Many Requests\" error response. This response will be in JSON format, following the schema referenced by \"#/components/schemas/TooManyRequestsResponse\".",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_200",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "How does the HRIS API handle requests that attempt to use unimplemented functionality, and what should a developer expect in the response?",
+      "answer": "If a request attempts to use functionality not implemented in the HRIS API, the response will be a \"501 Not Implemented\" error. The response content will be in JSON format and conform to the schema defined by \"#/components/schemas/NotImplementedResponse\".",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_200",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What does the 422 status code indicate in the HRIS API, and which schema is used to describe its response?",
+      "answer": "The 422 status code indicates a 'Validation error' in the HRIS API. The response for this status code is described using the 'UnprocessableEntityResponse' schema.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_210",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "If a developer receives a 501 status code while using the HRIS API, what does it signify and what content type is expected in the response?",
+      "answer": "A 501 status code signifies that the functionality is not implemented. The expected content type in the response is 'application/json', and it is described by the 'NotImplementedResponse' schema.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_210",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What type of response should a developer expect if they exceed the API's rate limit when making requests?",
+      "answer": "If a developer exceeds the API's rate limit while making requests, they should expect a 429 status code with a response of type 'TooManyRequestsResponse' in JSON format.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_427",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "How should a developer handle a situation where a request returns a 501 status code?",
+      "answer": "A 501 status code indicates that the requested functionality is not implemented. The developer should check the API documentation for available endpoints and functionalities, and consider contacting the API provider for further clarification or support regarding future implementation plans.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_427",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What response should a developer expect if they exceed the allowed number of requests when using the HRIS API?",
+      "answer": "If a developer exceeds the allowed number of requests when using the HRIS API, they will receive a 429 status code with the description 'Too many requests.' The response will be in JSON format and will adhere to the schema defined in 'TooManyRequestsResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_451",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "How does the HRIS API handle errors related to unimplemented functionalities and what response schema is used in such cases?",
+      "answer": "The HRIS API returns a 501 status code for errors related to unimplemented functionalities, with the description 'This functionality is not implemented.' The response is in JSON format and follows the schema defined in 'NotImplementedResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_451",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What kind of error response should a developer expect if they make too many requests to the StackOne API within a short period?",
+      "answer": "If a developer makes too many requests to the StackOne API within a short period, they should expect a \"429 Too Many Requests\" error response. The response will be in JSON format, conforming to the schema referenced as \"#/components/schemas/TooManyRequestsResponse\".",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_6",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "How does the StackOne API indicate that a requested functionality is not available to the user?",
+      "answer": "The StackOne API indicates that a requested functionality is not available through a \"501 Not Implemented\" error response. This response will be provided in JSON format, and it follows the schema specified as \"#/components/schemas/NotImplementedResponse\".",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_6",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "What does the StackOne API return when a user exceeds the allowable number of requests, and what is the expected response format?",
+      "answer": "When a user exceeds the allowable number of requests, the StackOne API returns a 429 status code with the description 'Too many requests.' The response format is in JSON, and the schema is referenced as 'TooManyRequestsResponse' in the API documentation.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_2",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "If a developer encounters a 'Bad gateway error' while using the StackOne API, what status code will they receive, and what schema should they refer to for the response structure?",
+      "answer": "A developer will receive a 502 status code when encountering a 'Bad gateway error' while using the StackOne API. They should refer to the 'BadGatewayResponse' schema for the response structure, as indicated in the API documentation.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_2",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "What response should a developer expect if they exceed the rate limit of requests to the StackOne API, and what content type is provided for this response?",
+      "answer": "If a developer exceeds the rate limit for requests to the StackOne API, they will receive a 429 status code indicating 'Too many requests.' The response content type provided for this error is 'application/json', which refers to the 'TooManyRequestsResponse' schema.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_21",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "How does the StackOne API handle requests for functionalities that have not been implemented, and what schema is used for this response?",
+      "answer": "When a request is made to the StackOne API for functionalities that are not implemented, the server responds with a 501 status code, indicating 'This functionality is not implemented.' The response content is in 'application/json' format and uses the 'NotImplementedResponse' schema.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_21",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "What response status code does the StackOne API return when a user exceeds the allowed number of requests, and what schema does the response follow?",
+      "answer": "The StackOne API returns a 429 status code when a user exceeds the allowed number of requests. The response follows the schema referenced by \"#/components/schemas/TooManyRequestsResponse\".",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_95",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "If the StackOne API returns a 501 status code, what does this indicate about the requested functionality?",
+      "answer": "A 501 status code indicates that the functionality requested by the user is not implemented in the StackOne API.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_95",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/stackone.json"
+      }
+    },
+    {
+      "question": "What does the API return when a request exceeds the rate limit, and how is this error structured?",
+      "answer": "When a request exceeds the rate limit, the API returns a 429 status code with the description \"Too many requests.\" The response content is in JSON format and follows the schema defined by \"#/components/schemas/TooManyRequestsResponse\".",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_217",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "If a developer encounters a 501 error while using this API, what does it signify about the endpoint they are trying to use?",
+      "answer": "A 501 error indicates that the functionality the developer is trying to access is not implemented. The response is provided in JSON format following the schema \"#/components/schemas/NotImplementedResponse\".",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_217",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What response should developers expect if they exceed the request limit to the StackOne API, and what is the content type of the response?",
+      "answer": "If developers exceed the request limit to the StackOne API, they should expect a 429 status code with the description 'Too many requests.' The content type of the response is 'application/json', and it follows the schema referenced by '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_231",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "How does the StackOne API handle a scenario where a requested functionality is not yet implemented, and what schema does the response follow?",
+      "answer": "When a requested functionality is not implemented in the StackOne API, it returns a 501 status code with the description 'This functionality is not implemented.' The response is in 'application/json' format and follows the schema referenced by '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_231",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What does a 501 status code indicate when interacting with the StackOne Unified API, and what type of response should the application expect?",
+      "answer": "A 501 status code indicates that the requested functionality is not implemented on the StackOne Unified API. The application should expect a response in JSON format conforming to the NotImplementedResponse schema.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_168",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "If a developer receives a 429 status code while making requests to the StackOne Unified API, what does this mean and what schema should they refer to for handling the response?",
+      "answer": "Receiving a 429 status code means that the developer has made too many requests in a short period of time, triggering rate limiting. The developer should refer to the TooManyRequestsResponse schema for handling the response appropriately.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_168",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What HTTP status code should a developer expect if they exceed the request limit on the StackOne Unified API - HRIS, and what does the corresponding response schema refer to?",
+      "answer": "A developer should expect a 429 HTTP status code if they exceed the request limit, which indicates 'Too many requests.' The corresponding response schema is referenced as '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_188",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "If a developer encounters an HTTP status code 501 when using the StackOne Unified API - HRIS, what does this mean and what response schema is associated with it?",
+      "answer": "An HTTP status code 501 indicates that the requested functionality is not implemented. The associated response schema for this status code is '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_188",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What should a developer expect if they exceed the rate limit when making requests to the API, and how is this information conveyed?",
+      "answer": "If a developer exceeds the rate limit when making requests to the API, they will receive a 429 status code with the description \"Too many requests.\" The response content will be in JSON format, adhering to the schema referenced as '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_196",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "Can you describe what the API will return if a requested functionality is not yet available, and how this is structured in the response?",
+      "answer": "If a requested functionality is not implemented, the API will return a 501 status code with the description \"This functionality is not implemented.\" The response will be in JSON format, structured according to the schema '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_196",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What does a 429 status code indicate in the StackOne Unified HRIS API, and what kind of response schema is expected?",
+      "answer": "A 429 status code indicates that there have been too many requests made to the API. The response will be in JSON format, and the schema for this response is referred to as 'TooManyRequestsResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_174",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "If a developer encounters a 501 status code while using the StackOne Unified HRIS API, what does this signify, and what should they expect in terms of response format?",
+      "answer": "A 501 status code signifies that the requested functionality is not implemented in the StackOne Unified HRIS API. The response will be provided in JSON format and will follow the schema defined as 'NotImplementedResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_174",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What does the 429 status code indicate when interacting with the HRIS API, and where can I find its schema definition?",
+      "answer": "The 429 status code indicates that there have been too many requests made to the HRIS API. The schema definition for the response content of this status code can be found under '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_206",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "If I encounter a 501 status code while using the HRIS API, what does it mean and what should I expect in the response content?",
+      "answer": "A 501 status code means that the requested functionality is not implemented in the HRIS API. The response content for this status code will be in JSON format and is defined by the schema referenced as '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_206",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What does the API return if a user makes too many requests in a short period?",
+      "answer": "If a user makes too many requests in a short period, the API returns a 429 status code with a description 'Too many requests.' The response content is in JSON format and follows the schema defined by '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_182",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What type of error response should a developer expect when an API feature has not been implemented yet?",
+      "answer": "When an API feature has not been implemented, the API returns a 501 status code with the description 'This functionality is not implemented.' The response content is in JSON format and adheres to the schema defined by '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_182",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What does the API return when a user exceeds the request limit, and what is the expected content type of the response?",
+      "answer": "When a user exceeds the request limit, the API returns a '429 Too Many Requests' error. The expected content type of the response is 'application/json', and it follows the schema referenced as '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_224",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "If a client receives a 501 status code from this API, what does it indicate about the requested functionality?",
+      "answer": "A 501 status code indicates that the functionality requested by the client is not implemented. The response content type is 'application/json', following the schema '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_224",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What error response should a developer expect if they exceed the rate limit when making requests to the StackOne Unified API - HRIS?",
+      "answer": "If a developer exceeds the rate limit when making requests to the StackOne Unified API - HRIS, they should expect a 429 status code with the description 'Too many requests.' The response content type will be 'application/json' and it will adhere to the schema defined by '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_308",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "How does the API indicate that a requested functionality has not been implemented, and what should a developer expect in the response?",
+      "answer": "The API indicates that a requested functionality has not been implemented with a 501 status code. The description for this code is 'This functionality is not implemented.' The response will be in 'application/json' format and will follow the schema referenced by '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_308",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What error response should a client expect when they make too many requests to the HRIS API, and what format will the response be in?",
+      "answer": "When a client makes too many requests to the HRIS API, they should expect a 429 status code with the description \"Too many requests.\" The response will be in the format of 'application/json' and will follow the schema referenced by '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_314",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "If a developer encounters a 501 error while using the HRIS API, what does this indicate about the requested functionality?",
+      "answer": "A 501 error indicates that the requested functionality is not implemented. The response will be in 'application/json' format and will follow the schema referenced by '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_314",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What is the response status code for a situation where the API functionality is not implemented, and what schema should be expected in the response?",
+      "answer": "The response status code for a situation where the API functionality is not implemented is 501. The expected schema in the response is referenced as NotImplementedResponse in the API documentation.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_335",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "If a developer receives a 'Too many requests' error, what response format should they expect, and where can they find the schema definition?",
+      "answer": "When a developer receives a 'Too many requests' error, the response format will be in JSON. The schema for this response is referenced as TooManyRequestsResponse and can be found in the components section of the API documentation under schemas.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_335",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What response should a developer expect when their request exceeds the allowed rate limit, and what information might this response contain?",
+      "answer": "When a request exceeds the allowed rate limit, the API returns a 429 status code with the description 'Too many requests'. The response is in JSON format and follows the schema referenced as '#/components/schemas/TooManyRequestsResponse', which likely contains details specific to rate limiting issues, such as retry-after time or error messages.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_258",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "If a developer encounters a 501 status code while using the StackOne HRIS API, what does this indicate about the requested functionality?",
+      "answer": "A 501 status code indicates that the functionality requested by the developer is not implemented. The response is provided in JSON format and follows the schema referenced as '#/components/schemas/NotImplementedResponse', which would generally include information about the lack of implementation for the requested feature.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_258",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What response can a developer expect if their request exceeds the rate limit when using the StackOne Unified API for HRIS, and what schema defines this response?",
+      "answer": "If a request exceeds the rate limit, the API will return a 429 status code with the description 'Too many requests.' The response content will be in JSON format and defined by the schema referenced as '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_301",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "How does the StackOne Unified API for HRIS handle a situation where a requested functionality is not implemented, and how is the response structured?",
+      "answer": "In the case where a requested functionality is not implemented, the API will return a 501 status code. The response includes a JSON payload structured according to the schema referenced as '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_301",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What does the API return when a user exceeds the number of allowed requests, and where can I find the response schema for this error?",
+      "answer": "When a user exceeds the number of allowed requests, the API returns a 429 status code with the description 'Too many requests.' The response content is in JSON format, and its schema can be found by referencing '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_295",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "How does the API handle requests for functionalities that are not implemented, and what is the expected response format?",
+      "answer": "The API returns a 501 status code with the description 'This functionality is not implemented' for requests for functionalities that are not implemented. The response is in JSON format, and its schema can be found by referencing '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_295",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What does the API return when a client makes too many requests in a short period?",
+      "answer": "When a client makes too many requests in a short period, the API returns a 429 status code with a response described by the 'TooManyRequestsResponse' schema.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_282",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "How does the API handle requests for functionalities that are not yet implemented?",
+      "answer": "For requests to functionalities that are not yet implemented, the API returns a 501 status code with a response described by the 'NotImplementedResponse' schema.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_282",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What is the meaning of the 429 status code in the StackOne Unified API, and what should a developer expect in the response?",
+      "answer": "The 429 status code indicates 'Too many requests.' A developer should expect the response to be in JSON format, following the schema defined in the 'TooManyRequestsResponse' component of the API documentation.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_321",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "If a developer encounters a 501 status code while using the StackOne Unified API, what does this indicate about the functionality they are trying to use?",
+      "answer": "A 501 status code indicates that the functionality the developer is trying to use is not implemented. The response will be in JSON format, adhering to the 'NotImplementedResponse' schema specified in the API documentation.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_321",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What does the API return when a user makes too many requests in a short period?",
+      "answer": "When a user makes too many requests in a short period, the API returns a 429 status code with a description \"Too many requests.\" The content type is application/json, and the response follows the schema referenced as #/components/schemas/TooManyRequestsResponse.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_245",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "If a developer encounters a 'Server error while executing the request', what HTTP status code should they expect and what could this indicate about the server's state?",
+      "answer": "A 'Server error while executing the request' corresponds to an HTTP status code 500. This indicates that there is a server-side problem preventing the successful execution of the request. The server encountered an unexpected condition that prevented it from fulfilling the request.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_245",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What error response should a developer expect if too many requests are made to the API, and what schema is used for this response?",
+      "answer": "If too many requests are made to the API, a 429 status code will be returned with the description 'Too many requests.' The response content is in JSON format, and the schema used for this response is referenced by '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_327",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "If a developer encounters a 501 error while integrating with this API, what does it indicate, and which schema defines the structure of this response?",
+      "answer": "A 501 error indicates that the requested functionality is not implemented. The response is provided in JSON format, and the schema defining the structure of this response is referenced by '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_327",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What information is provided by the API when a \"Too many requests\" error occurs, and how can a developer interpret this response?",
+      "answer": "When a \"Too many requests\" error occurs, the API responds with a 429 status code and a JSON content type. The response schema is defined by the \"TooManyRequestsResponse\" in the components. This response indicates that the client has sent too many requests in a given amount of time, and the client should slow down the request rate to avoid being throttled.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_252",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "How should a developer handle a situation where they encounter a \"Bad gateway error\" while making a request to the HRIS API?",
+      "answer": "If a developer encounters a \"Bad gateway error,\" the API will return a 502 status code along with a JSON response conforming to the \"BadGatewayResponse\" schema. This error typically indicates that the server, acting as a gateway or proxy, received an invalid response from the upstream server. The developer should check the upstream server's status and ensure it is operational, or try the request again later.",
+      "difficulty": "hard",
+      "source_chunk_id": "doc_252",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What response should a developer expect if they exceed the request limit when using the HRIS API, and how is the content formatted?",
+      "answer": "If a developer exceeds the request limit when using the HRIS API, they will receive a 429 status code with the description 'Too many requests.' The content of the response is formatted as application/json, and it follows the schema defined in '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_276",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "How does the HRIS API handle requests for unimplemented functionality, and what should the response contain?",
+      "answer": "The HRIS API responds with a 501 status code for requests related to functionalities that are not implemented. The response description is 'This functionality is not implemented.' The content is formatted as application/json, adhering to the schema defined in '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_276",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What does the 429 status code indicate and where can I find more information about the response format?",
+      "answer": "The 429 status code indicates 'Too many requests'. More information about the response format can be found in the schema referenced as '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_288",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What type of security mechanism is mentioned in the API documentation and how is it structured?",
+      "answer": "The API documentation mentions a security mechanism using 'basic' authentication. It is structured as a list under the 'security' section, indicating that the API may require a username and password for authentication.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_288",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What response should a developer expect if their requests exceed the allowed rate limit, and where can they find the schema for this response in the API documentation?",
+      "answer": "If a developer's requests exceed the allowed rate limit, they should expect a 429 status code response with the description \"Too many requests.\" The schema for this response can be found by referencing \"#/components/schemas/TooManyRequestsResponse\" in the API documentation.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_349",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What does a 501 status code indicate in the StackOne Unified API - HRIS, and what is the associated schema for the response?",
+      "answer": "A 501 status code indicates that the functionality is not implemented. The response for this status code is structured according to the schema referenced as \"#/components/schemas/NotImplementedResponse\" in the API documentation.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_349",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What response should I expect from the API if I exceed the number of allowed requests?",
+      "answer": "If you exceed the number of allowed requests, the API will return a response with a 429 status code, which indicates 'Too many requests'. The response content will be in JSON format following the schema referenced by '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_403",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "How does the API handle requests for functionalities that are not implemented, and what response schema is used?",
+      "answer": "For requests for functionalities that are not implemented, the API returns a 501 status code, which indicates that the functionality is not implemented. The response content will be in JSON format, using the schema referenced by '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_403",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What error response will be returned if a user makes too many requests to the HRIS API, and what is the schema used for this response?",
+      "answer": "If a user makes too many requests to the HRIS API, the API will return a 429 status code with the description 'Too many requests.' The response content type is application/json, and it uses the schema referenced as '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_341",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "In the event of a server error while processing a request to the HRIS API, what status code is returned and what schema defines the structure of the error response?",
+      "answer": "In the event of a server error while processing a request to the HRIS API, a 500 status code is returned. The error response is in the format of application/json and follows the schema referenced as '#/components/schemas/InternalServerErrorResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_341",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What is the expected response if a user sends too many requests to the HRIS API, and how should they handle it?",
+      "answer": "If a user sends too many requests to the HRIS API, they will receive a 429 status code with a description 'Too many requests.' The response content will be in 'application/json' format and will follow the schema defined by '#/components/schemas/TooManyRequestsResponse'. To handle this, users should implement rate limiting in their application to avoid sending excessive requests.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_375",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What does the 501 status code indicate when interacting with the HRIS API, and what should developers expect in the response?",
+      "answer": "The 501 status code indicates that the functionality is not implemented. When this status code is returned, the response content will be in 'application/json' format and will adhere to the schema defined by '#/components/schemas/NotImplementedResponse'. Developers should interpret this as a feature or endpoint that is currently unavailable.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_375",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What does the HTTP 429 status code signify in the context of the StackOne Unified API - HRIS, and which schema is used for its response?",
+      "answer": "The HTTP 429 status code signifies 'Too many requests.' The response for this status code uses the schema referenced by '#/components/schemas/TooManyRequestsResponse.'",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_423",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "If a developer encounters a 501 status code while interacting with the HRIS API, what does this indicate, and which schema should they refer to for the response structure?",
+      "answer": "A 501 status code indicates that the functionality being attempted is not implemented. The developer should refer to the schema '#/components/schemas/NotImplementedResponse' for the response structure.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_423",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What response should a developer expect when their API request exceeds the rate limit, and how is this response structured?",
+      "answer": "When an API request exceeds the rate limit, a 429 status code ('Too many requests') is returned. The response is structured in JSON format, adhering to the schema defined by '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_410",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "If a developer encounters a 501 status code while using the HRIS API, what does this indicate about the requested functionality?",
+      "answer": "A 501 status code indicates that the requested functionality is not implemented in the API. The response is provided in JSON format, structured according to the schema '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_410",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What does a 501 status code indicate when using the StackOne Unified API - HRIS, and what schema should be expected in the response?",
+      "answer": "A 501 status code indicates that the functionality is not implemented. The response will follow the schema referenced as NotImplementedResponse in the components section of the API documentation.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_362",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "If a developer receives a 429 status code while accessing the HRIS API, what does it mean, and what schema is likely to be returned in the response?",
+      "answer": "A 429 status code means that there have been too many requests made to the API. The response will conform to the schema referred to as TooManyRequestsResponse in the components section of the API documentation.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_362",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What does a 501 status code indicate when using the StackOne Unified API, and what should a developer expect in the response?",
+      "answer": "A 501 status code indicates that the requested functionality is not implemented. The response will be in JSON format and will follow the schema defined in the API documentation under \"#/components/schemas/NotImplementedResponse\".",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_381",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "How is error handling structured in the StackOne Unified API for a 500 status code, and what information is typically included in the response?",
+      "answer": "For a 500 status code, which signifies a server error while executing the request, the StackOne Unified API provides a response in JSON format. This response will adhere to the schema outlined in \"#/components/schemas/InternalServerErrorResponse\", which typically includes details about the server error encountered.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_381",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What response should a developer expect if they exceed the rate limit when making requests to the HRIS API?",
+      "answer": "If a developer exceeds the rate limit when making requests to the HRIS API, they will receive a 429 status code with the description \"Too many requests.\" The response will be in JSON format and follow the schema referenced as \"#/components/schemas/TooManyRequestsResponse.\"",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_355",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "How does the HRIS API handle unimplemented functionality, and what response code is provided in such cases?",
+      "answer": "The HRIS API indicates unimplemented functionality by returning a 501 status code. The response includes a description \"This functionality is not implemented\" and is provided in JSON format following the schema referenced as \"#/components/schemas/NotImplementedResponse.\"",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_355",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What does the API return when too many requests are sent in a short period, and where can I find the schema for this response?",
+      "answer": "When too many requests are sent in a short period, the API returns a '429 Too Many Requests' error. The schema for this response can be found under '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_416",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "How does the API handle a situation where a requested functionality is not yet implemented, and what is the expected structure of the response?",
+      "answer": "If a requested functionality is not yet implemented, the API returns a '501 Not Implemented' error. The expected structure of the response is defined by the schema '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_416",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What response should a developer expect if they exceed the rate limit on the HRIS API and what content type is returned?",
+      "answer": "If a developer exceeds the rate limit on the HRIS API, they will receive a 429 status code with the description 'Too many requests.' The response content type is 'application/json', and the response schema is referenced as '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_368",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "How does the HRIS API handle a scenario where a server error occurs during request execution, and what schema is used for the response?",
+      "answer": "In the event of a server error while executing a request, the HRIS API returns a 500 status code with the description 'Server error while executing the request.' The response content type is 'application/json', and it uses the schema referenced as '#/components/schemas/InternalServerErrorResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_368",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What response should a developer expect if their API requests exceed the allowed rate limits when using the StackOne Unified API - HRIS?",
+      "answer": "If a developer's API requests exceed the allowed rate limits, they should expect a 429 response status code, which is described as 'Too many requests'. The response will be in JSON format, following the schema referenced by #/components/schemas/TooManyRequestsResponse.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_389",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "How does the StackOne Unified API - HRIS handle server errors, and what should a developer understand about implementing functionality not yet supported by the API?",
+      "answer": "The StackOne Unified API - HRIS handles server errors by returning a 500 status code, described as 'Server error while executing the request'. The error response content will be in JSON format and conform to the schema referenced by #/components/schemas/InternalServerErrorResponse. Additionally, if a developer attempts to use functionality not yet supported by the API, they will receive a 501 status code, described as 'This functionality is not implemented', with the response content following the schema #/components/schemas/NotImplementedResponse.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_389",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What response should a developer expect if they exceed the request rate limits when using the HRIS API?",
+      "answer": "If a developer exceeds the request rate limits, they will receive a 429 status code with a response described as 'Too many requests'. The response content type will be application/json following the schema referenced as '#/components/schemas/TooManyRequestsResponse'.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_441",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "How does the HRIS API handle requests for functionalities that are not yet implemented, and what is the response structure for such scenarios?",
+      "answer": "Requests for functionalities that are not yet implemented will return a 501 status code, described as 'This functionality is not implemented'. The response will be in application/json format following the schema referenced as '#/components/schemas/NotImplementedResponse'.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_441",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What response should a client expect if they exceed the allowed number of requests to the API, and what is the relevant schema for this response?",
+      "answer": "If a client exceeds the allowed number of requests to the API, they should expect a 429 status code response with the description 'Too many requests.' The response will be in JSON format, adhering to the schema referenced by \"#/components/schemas/TooManyRequestsResponse\".",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_465",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "Which status code indicates that a requested functionality is not implemented on the API, and what JSON schema does the response follow?",
+      "answer": "The status code 501 indicates that a requested functionality is not implemented. The response to this status code will be in JSON format and follows the schema referenced by \"#/components/schemas/NotImplementedResponse\".",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_465",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "What does a 429 status code indicate when making a request to the HRIS API, and where can I find the schema for the response content?",
+      "answer": "A 429 status code indicates 'Too many requests.' The schema for the response content can be found in the 'TooManyRequestsResponse' component of the API documentation.",
+      "difficulty": "easy",
+      "source_chunk_id": "doc_459",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    },
+    {
+      "question": "If I encounter a 501 status code while using the HRIS API, what does it mean, and what should I consider doing next?",
+      "answer": "A 501 status code means that 'This functionality is not implemented.' This indicates that the functionality you are attempting to use is not available. You may need to check the API documentation for alternative endpoints or functionality, or contact support for further guidance.",
+      "difficulty": "medium",
+      "source_chunk_id": "doc_459",
+      "source_metadata": {
+        "attribute": "paths",
+        "url": "https://api.eu1.stackone.com/oas/hris.json"
+      }
+    }
+  ],
+  "total_questions": 100,
+  "chunks_processed": 50,
+  "questions_per_chunk": 2
+}

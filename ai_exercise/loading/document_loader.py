@@ -24,20 +24,20 @@ def get_json_data(url: str) -> dict[str, Any]:
     return json_data
 
 
-def document_json_array(data: list[dict[str, Any]], source: str) -> list[Document]:
+def document_json_array(data: list[dict[str, Any]], attribute: str, url: str) -> list[Document]:
     """Converts an array of JSON chunks into a list of Document objects."""
     return [
-        Document(page_content=json.dumps(item), metadata={"source": source})
+        Document(page_content=json.dumps(item), metadata={"url": url, "attribute": attribute})
         for item in data
     ]
 
 
-def build_docs(data: dict[str, Any]) -> list[Document]:
+def build_docs(data: dict[str, Any], url: str) -> list[Document]:
     """Chunk (badly) and convert the JSON data into a list of Document objects."""
     docs = []
     for attribute in ["paths", "webhooks", "components"]:
         chunks = chunk_data(data, attribute)
-        docs.extend(document_json_array(chunks, attribute))
+        docs.extend(document_json_array(chunks, attribute, url))
     return docs
 
 

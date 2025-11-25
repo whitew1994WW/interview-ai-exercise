@@ -30,8 +30,27 @@ class ChatQuery(BaseModel):
 
     query: str
 
+class SearchQuery(BaseModel):
+    """Model for the search input."""
+
+    query: str
+    k: int = 5
+
+class SearchChunk(BaseModel):
+    """Model for a single search result chunk."""
+
+    document: str
+    metadata: dict | None = None
+    id: str
+    distance: float | None = None
 
 class ChatOutput(BaseModel):
     """Model for the chat route output."""
-
     message: str
+    context: list[SearchChunk]
+
+class SearchOutput(BaseModel):
+    """Model for the search route output."""
+
+    chunks: list[SearchChunk]
+    total_results: int

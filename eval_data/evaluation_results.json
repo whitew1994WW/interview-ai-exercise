@@ -1,0 +1,219 @@
+{
+  "aggregate_metrics": {
+    "precision_at_k": 0.4,
+    "recall_at_k": 0.4,
+    "average_chunk_rank": 1.75,
+    "average_faithfulness": 1.0,
+    "average_correctness": 0.58,
+    "total_test_cases": 10,
+    "chunks_found_in_top_k": 4,
+    "chunks_not_found": 6
+  },
+  "individual_results": [
+    {
+      "question": "What does the 422 status code indicate when making an RPC call to an action in the StackOne API?",
+      "answer": "The 422 status code indicates a validation error when making an RPC call to an action. The response will include content in the 'application/json' format, adhering to the 'UnprocessableEntityResponse' schema.",
+      "generated_answer": "The 422 status code indicates a \"Validation error\" when making an RPC call to an action in the StackOne API.",
+      "source_chunk_id": "doc_106",
+      "chunk_in_top_k": true,
+      "chunk_rank": 1,
+      "faithfulness_score": 1.0,
+      "faithfulness_reasoning": "The answer accurately states that the 422 status code indicates a 'Validation error' when making an RPC call to an action, which is directly supported by the context provided in multiple chunks.",
+      "answer_correctness_score": 0.8,
+      "correctness_reasoning": "The generated answer correctly identifies the 422 status code as indicating a validation error during an RPC call to an action, which is the core information. However, it omits details about the response format ('application/json') and the adherence to the 'UnprocessableEntityResponse' schema, which are part of the ground truth answer. These omissions are minor but relevant, leading to a score of 0.8.",
+      "retrieved_chunk_ids": [
+        "doc_106",
+        "doc_104",
+        "doc_112",
+        "doc_230",
+        "doc_173"
+      ],
+      "num_chunks_retrieved": 5
+    },
+    {
+      "question": "If a developer encounters a 429 status code while using the StackOne API, what retry strategy is suggested by the documentation?",
+      "answer": "The StackOne API documentation suggests using a 'backoff' strategy for retrying requests that encounter a 429 status code, which indicates too many requests.",
+      "generated_answer": "The context does not provide specific information about a retry strategy for a 429 status code. Therefore, I do not know the suggested retry strategy from the documentation.",
+      "source_chunk_id": "doc_106",
+      "chunk_in_top_k": false,
+      "chunk_rank": null,
+      "faithfulness_score": 1.0,
+      "faithfulness_reasoning": "The answer correctly states that the context does not provide specific information about a retry strategy for a 429 status code. The context only describes the 429 status code as 'Too many requests' and does not mention any retry strategy. Therefore, the answer is fully supported by the context.",
+      "answer_correctness_score": 0.0,
+      "correctness_reasoning": "The generated answer states that there is no information about a retry strategy for a 429 status code, which directly contradicts the ground truth. The ground truth clearly mentions a 'backoff' strategy for handling 429 status codes, indicating that the generated answer is completely incorrect.",
+      "retrieved_chunk_ids": [
+        "doc_173",
+        "doc_320",
+        "doc_275",
+        "doc_402",
+        "doc_367"
+      ],
+      "num_chunks_retrieved": 5
+    },
+    {
+      "question": "What does a 501 status code indicate when using the StackOne API, and what is the expected response format?",
+      "answer": "A 501 status code indicates that the functionality is not implemented. The expected response format is JSON, which will adhere to the schema defined in the NotImplementedResponse component of the API.",
+      "generated_answer": "I do not know the answer based on the provided context.",
+      "source_chunk_id": "doc_81",
+      "chunk_in_top_k": false,
+      "chunk_rank": null,
+      "faithfulness_score": 1.0,
+      "faithfulness_reasoning": "The answer states that the information needed to provide a specific answer is not available in the provided context. This is a faithful response because the context consists of schema definitions and examples, which do not provide specific factual information that could be used to answer a question. Therefore, the claim that the answer cannot be determined from the context is accurate and fully supported by the context.",
+      "answer_correctness_score": 0.0,
+      "correctness_reasoning": "The generated answer does not provide any of the information contained in the ground truth answer. It states a lack of knowledge rather than addressing the 501 status code or the expected JSON response format. Therefore, it is completely incorrect in the context of the provided ground truth.",
+      "retrieved_chunk_ids": [
+        "doc_517",
+        "doc_147",
+        "doc_473",
+        "doc_156",
+        "doc_83"
+      ],
+      "num_chunks_retrieved": 5
+    },
+    {
+      "question": "How does the StackOne API handle security, and what are the available authentication methods?",
+      "answer": "The StackOne API handles security using two methods: basic authentication and API Key authentication. These methods are specified in the security section of the API documentation.",
+      "generated_answer": "The StackOne API handles security by using HTTP Basic Authentication as the available authentication method.",
+      "source_chunk_id": "doc_81",
+      "chunk_in_top_k": false,
+      "chunk_rank": null,
+      "faithfulness_score": 1.0,
+      "faithfulness_reasoning": "The answer states that the StackOne API uses HTTP Basic Authentication, which is directly supported by the context provided in Chunk 4 and Chunk 5, where it mentions the security scheme as 'basic' with the type 'http'. Therefore, the answer is fully faithful to the context.",
+      "answer_correctness_score": 0.5,
+      "correctness_reasoning": "The generated answer correctly identifies HTTP Basic Authentication as a method used by the StackOne API, which aligns with the ground truth. However, it omits the mention of API Key authentication, which is a significant part of the security methods described in the ground truth. This omission results in a partial representation of the security methods, warranting a score in the middle range.",
+      "retrieved_chunk_ids": [
+        "doc_4",
+        "doc_506",
+        "doc_14",
+        "doc_107",
+        "doc_467"
+      ],
+      "num_chunks_retrieved": 5
+    },
+    {
+      "question": "What does the 501 status code indicate in the StackOne API, and what is the expected content type of the response?",
+      "answer": "The 501 status code indicates that the functionality is not implemented in the StackOne API. The expected content type of the response is 'application/json', and the schema for the response is referenced by '#/components/schemas/NotImplementedResponse'.",
+      "generated_answer": "The 501 status code indicates that \"This functionality is not implemented\" in the StackOne API. The expected content type of the response is \"application/json\".",
+      "source_chunk_id": "doc_85",
+      "chunk_in_top_k": false,
+      "chunk_rank": null,
+      "faithfulness_score": 1.0,
+      "faithfulness_reasoning": "The answer is fully supported by the context. The context explicitly states that the 501 status code indicates \"This functionality is not implemented\" and that the content type of the response is \"application/json\". Both claims in the answer are directly verifiable from the provided context.",
+      "answer_correctness_score": 0.8,
+      "correctness_reasoning": "The generated answer correctly identifies the 501 status code as indicating that the functionality is not implemented in the StackOne API and specifies the expected content type as 'application/json'. However, it omits the reference to the response schema '#/components/schemas/NotImplementedResponse', which is a key piece of information in the ground truth answer. This omission results in a score of 0.8, as most key information is correct but there is a minor omission.",
+      "retrieved_chunk_ids": [
+        "doc_506",
+        "doc_80",
+        "doc_88",
+        "doc_84",
+        "doc_89"
+      ],
+      "num_chunks_retrieved": 5
+    },
+    {
+      "question": "What authentication methods are supported by the StackOne API according to the given documentation chunk?",
+      "answer": "The StackOne API supports two authentication methods as indicated in the documentation chunk: Basic authentication and API Key authentication.",
+      "generated_answer": "The given documentation chunk indicates that the StackOne API supports basic authentication methods, as shown by the securitySchemes definition with the type \"http\" and scheme \"basic\".",
+      "source_chunk_id": "doc_85",
+      "chunk_in_top_k": false,
+      "chunk_rank": null,
+      "faithfulness_score": 1.0,
+      "faithfulness_reasoning": "The answer accurately reflects the information provided in the context. The context includes a definition of a security scheme with type 'http' and scheme 'basic', which supports the claim that the StackOne API supports basic authentication methods. Therefore, the answer is fully faithful to the context.",
+      "answer_correctness_score": 0.6,
+      "correctness_reasoning": "The generated answer correctly identifies that the StackOne API supports basic authentication, which is part of the ground truth. However, it omits the mention of API Key authentication, which is a key point in the ground truth answer. Therefore, while it contains some correct information, it is missing a significant part of the answer.",
+      "retrieved_chunk_ids": [
+        "doc_4",
+        "doc_18",
+        "doc_506",
+        "doc_107",
+        "doc_467"
+      ],
+      "num_chunks_retrieved": 5
+    },
+    {
+      "question": "What does the API return when a functionality is not implemented, and how is this response structured?",
+      "answer": "When a functionality is not implemented, the API returns a 501 status code. The response is structured in JSON format, referencing the schema defined at '#/components/schemas/NotImplementedResponse'.",
+      "generated_answer": "The API returns a \"501\" status code when a functionality is not implemented. This response is structured as follows: it includes a description \"This functionality is not implemented.\" and the content is in \"application/json\" format with a schema reference to \"#/components/schemas/NotImplementedResponse\".",
+      "source_chunk_id": "doc_89",
+      "chunk_in_top_k": true,
+      "chunk_rank": 2,
+      "faithfulness_score": 1.0,
+      "faithfulness_reasoning": "The answer accurately describes the '501' status code as presented in the context. It correctly states that the '501' status code indicates that a functionality is not implemented, includes the description 'This functionality is not implemented.', and specifies that the content is in 'application/json' format with a schema reference to '#/components/schemas/NotImplementedResponse'. All these details are directly supported by the context provided.",
+      "answer_correctness_score": 0.9,
+      "correctness_reasoning": "The generated answer correctly states that a 501 status code is returned when a functionality is not implemented and mentions the JSON format and schema reference, which are key points. It adds extra detail about the description \"This functionality is not implemented,\" which is not present in the ground truth but does not contradict it. The core information is conveyed accurately, with only minor additional details.",
+      "retrieved_chunk_ids": [
+        "doc_85",
+        "doc_89",
+        "doc_81",
+        "doc_100",
+        "doc_414"
+      ],
+      "num_chunks_retrieved": 5
+    },
+    {
+      "question": "What security mechanisms are supported by the StackOne API for authentication?",
+      "answer": "The StackOne API supports two security mechanisms for authentication: Basic Authentication and API Key Authentication.",
+      "generated_answer": "The StackOne API supports the \"basic\" HTTP authentication scheme for security mechanisms.",
+      "source_chunk_id": "doc_89",
+      "chunk_in_top_k": false,
+      "chunk_rank": null,
+      "faithfulness_score": 1.0,
+      "faithfulness_reasoning": "The answer states that the StackOne API supports the \"basic\" HTTP authentication scheme, which is directly supported by the context provided in Chunks 2 and 3. Both chunks mention a security scheme of type \"http\" with the scheme \"basic\". Therefore, the answer is fully faithful to the context.",
+      "answer_correctness_score": 0.5,
+      "correctness_reasoning": "The generated answer correctly identifies 'basic' HTTP authentication as a security mechanism supported by the StackOne API, which aligns with the ground truth. However, it omits the mention of 'API Key Authentication,' which is a significant part of the ground truth answer. Therefore, while it contains some correct information, it is missing a key point.",
+      "retrieved_chunk_ids": [
+        "doc_4",
+        "doc_107",
+        "doc_467",
+        "doc_583",
+        "doc_506"
+      ],
+      "num_chunks_retrieved": 5
+    },
+    {
+      "question": "What is the purpose of the 'http_method' field in the StackOne API, and can you provide an example of its value?",
+      "answer": "The 'http_method' field in the StackOne API specifies the HTTP method used for the request. It provides information on whether the request was a GET, POST, PUT, DELETE, etc. An example value for this field is 'get'.",
+      "generated_answer": "The purpose of the 'http_method' field in the StackOne API is to describe the requested HTTP method. An example of its value is \"get\".",
+      "source_chunk_id": "doc_147",
+      "chunk_in_top_k": true,
+      "chunk_rank": 1,
+      "faithfulness_score": 1.0,
+      "faithfulness_reasoning": "The answer accurately describes the 'http_method' field as being used to describe the requested HTTP method, which is directly supported by the context. The context provides a description of the 'http_method' field, stating it is a string type with a description of 'The requested HTTP method' and gives 'get' as an example value. Therefore, the answer is fully faithful to the provided context.",
+      "answer_correctness_score": 0.9,
+      "correctness_reasoning": "The generated answer correctly identifies the purpose of the 'http_method' field as describing the HTTP method used in a request and provides an example value ('get'). However, it omits the specific mention of other HTTP methods like POST, PUT, DELETE, which are included in the ground truth. This omission is minor, so the answer is mostly correct.",
+      "retrieved_chunk_ids": [
+        "doc_147",
+        "doc_160",
+        "doc_137",
+        "doc_91",
+        "doc_77"
+      ],
+      "num_chunks_retrieved": 5
+    },
+    {
+      "question": "How can a developer determine if a request to the StackOne API was successful, and what data type represents this information?",
+      "answer": "A developer can determine if a request to the StackOne API was successful by checking the 'success' field. This field is a boolean data type, where a value of 'true' indicates that the request was successful, and 'false' indicates failure.",
+      "generated_answer": "A developer can determine if a request to the StackOne API was successful by checking the \"success\" field. This information is represented by a boolean data type.",
+      "source_chunk_id": "doc_147",
+      "chunk_in_top_k": true,
+      "chunk_rank": 3,
+      "faithfulness_score": 1.0,
+      "faithfulness_reasoning": "The answer is fully supported by the context. The context describes a 'success' field as a boolean that indicates the request success flag, which aligns with the answer's claim that a developer can check this field to determine if a request was successful.",
+      "answer_correctness_score": 0.8,
+      "correctness_reasoning": "The generated answer correctly identifies that the 'success' field is used to determine if a request was successful and that it is a boolean data type. However, it omits the specific detail that 'true' indicates success and 'false' indicates failure, which is a minor but important detail.",
+      "retrieved_chunk_ids": [
+        "doc_137",
+        "doc_160",
+        "doc_147",
+        "doc_156",
+        "doc_517"
+      ],
+      "num_chunks_retrieved": 5
+    }
+  ],
+  "evaluation_config": {
+    "k_neighbors": 5,
+    "total_questions_evaluated": 10,
+    "max_questions": 10
+  }
+}
