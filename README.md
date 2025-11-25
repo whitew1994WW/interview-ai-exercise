@@ -38,6 +38,8 @@ make dev-api
 
 you can also use `make start-api` to start the API using Docker.
 
+Note: For running locally - if you hit isues with onnxruntime (DLL errors) they can be fixed by allowing uv to manage its own python installation (uv python install 3.11) as the base system python version may be corrupted.
+
 ## Frontend
 
 The project includes a frontend built with [Streamlit](https://streamlit.io/). Its code can be found at `demo`.

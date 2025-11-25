@@ -20,6 +20,7 @@ from ai_exercise.models import (
 from ai_exercise.retrieval.retrieval import get_relevant_chunks
 from ai_exercise.retrieval.vector_store import create_collection
 
+
 app = FastAPI()
 
 collection = create_collection(chroma_client, openai_ef, SETTINGS.collection_name)
@@ -34,14 +35,17 @@ def health_check_route() -> HealthRouteOutput:
 @app.get("/load")
 async def load_docs_route() -> LoadDocumentsOutput:
     """Route to load documents into vector store."""
-    json_data = get_json_data()
-    documents = build_docs(json_data)
 
-    # split docs
-    documents = split_docs(documents)
+    for url in SETTINGS.json_urls:
+        json_data = get_json_data(url)
+        print(json_data)
+        documents = build_docs(json_data)
 
-    # load documents into vector store
-    add_documents(collection, documents)
+        # split docs
+        documents = split_docs(documents)
+
+        # load documents into vector store
+        add_documents(collection, documents)
 
     # check the number of documents in the collection
     print(f"Number of documents in collection: {collection.count()}")
