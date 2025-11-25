@@ -30,5 +30,5 @@ Proposed improvements:
 
 Current testing results (also in a json file in the eval_data folder):
 
-![image.png](images/image.png)
+<img width="1161" height="736" alt="Screenshot 2025-11-25 163106" src="https://github.com/user-attachments/assets/c1e6ba49-551f-46e5-aaf4-68ed2438fee0" />
 
