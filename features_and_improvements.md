@@ -2,6 +2,10 @@
 
 My focus for my time during this excercise was on the RAG & chat testing approach. The reason for this is that without evaluation, it is difficult to know/understand where bottlenecks are and where time should be spent on improvement.
 
+The eval system was built with the UI as the main point of interaction. The reason for this is that it is easier to inspect and understand results in a visual way, especially at this stage in a project where it is mostly PoC and there is high potential for change to the evaluation/chat system.
+
+The UI code written is mostly throwaway code (little time spent tidying it up), as it will never be production code, and will mostly be used for debugging and development.
+
 So far in this excercise I have:
 
 - Loaded in the json schemas
